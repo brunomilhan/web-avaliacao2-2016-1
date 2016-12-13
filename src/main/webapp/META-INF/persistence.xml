@@ -3,11 +3,18 @@
     <persistence-unit name="InscricaoPU" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <jta-data-source>java:/jdbc/avaliacao2</jta-data-source>
+        <class>if6ae.entity.InscricaoEntity</class>
+        <class>if6ae.entity.InscricaoMinicursoEntity</class>
+        <class>if6ae.entity.MinicursoEntity</class>
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://dev.ct.utfpr.edu.br/cema"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username"/>
+            <property name="hibernate.connection.password"/>
         </properties>
     </persistence-unit>
 </persistence>
