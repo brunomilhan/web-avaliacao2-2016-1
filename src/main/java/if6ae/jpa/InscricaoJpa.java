@@ -42,4 +42,15 @@ public class InscricaoJpa {
         return q.getSingleResult();
     }
 
+    /**
+     * Retorna todas inscrições
+     */
+    public List<InscricaoEntity> findAll() {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<InscricaoEntity> cq = cb.createQuery(InscricaoEntity.class);
+        TypedQuery<InscricaoEntity> q = em.createQuery(cq);
+        return q.getResultList();
+    }
+
+
 }
